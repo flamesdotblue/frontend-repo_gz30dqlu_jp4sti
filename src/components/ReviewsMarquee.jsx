@@ -31,11 +31,11 @@ const reviews = [
 function ReviewCard({ name, role, text }) {
   const initials = name.split(' ').map(n => n[0]).join('').slice(0, 2);
   return (
-    <div className="shrink-0 w-[360px] md:w-[420px]">
+    <div className="shrink-0 w-[320px] md:w-[400px]">
       <div className="relative rounded-2xl border border-white/15 bg-white/5 backdrop-blur-xl p-5 md:p-6">
         <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-white/20 to-white/5 text-white grid place-items-center font-semibold">
+          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-500/30 to-orange-500/10 text-white grid place-items-center font-semibold">
             {initials}
           </div>
           <div className="">
@@ -55,10 +55,9 @@ function ReviewCard({ name, role, text }) {
 }
 
 export default function ReviewsMarquee() {
-  // Duplicate list to create continuous marquee effect
   const row = [...reviews, ...reviews];
   return (
-    <section className="relative bg-black py-16 border-t border-white/10">
+    <section id="reviews" className="relative bg-black py-16 border-t border-white/10">
       <style>{`
         @keyframes marqueeLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         @keyframes marqueeRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
@@ -68,7 +67,7 @@ export default function ReviewsMarquee() {
           <span className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-3 py-1 text-xs text-white/80 backdrop-blur">
             What customers say
           </span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold">Trusted by modern finance teams</h2>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white">Trusted by modern finance teams</h2>
         </div>
       </div>
       <div className="overflow-hidden">

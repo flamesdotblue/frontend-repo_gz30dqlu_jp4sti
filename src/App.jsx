@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Features from './components/Features';
 import ReviewsMarquee from './components/ReviewsMarquee';
-import Footer from './components/Footer';
 
 function App() {
   return (
@@ -9,9 +9,9 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Features />
         <ReviewsMarquee />
       </main>
-      <Footer />
     </div>
   );
 }
