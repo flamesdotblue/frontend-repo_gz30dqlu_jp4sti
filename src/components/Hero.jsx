@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <section className="relative h-[92vh] min-h-[640px] w-full bg-black overflow-hidden">
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/IKzHtP5ThSO83edK/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <Spline scene="https://prod.spline.design/EUGIv8h3muIGWcxR/scene.splinecode" style={{ width: '100%', height: '100%' }} />
         {/* soft gradient overlays for depth; pointer-events disabled to keep scene interactive */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-black" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
       </div>
 
@@ -25,11 +25,11 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a href="#get-started" className="inline-flex items-center gap-2 rounded-md bg-orange-600 hover:bg-orange-500 text-black font-semibold px-5 py-3 transition">
+            <a href="#get-started" className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/10 hover:bg-white/15 text-white font-semibold px-5 py-3 backdrop-blur-xl transition">
               Get Started
               <ArrowRight size={18} />
             </a>
-            <a href="#learn-more" className="inline-flex items-center gap-2 rounded-md border border-white/15 hover:border-white/25 text-white px-5 py-3 transition">
+            <a href="#learn-more" className="inline-flex items-center gap-2 rounded-xl border border-white/15 hover:border-white/25 text-white/90 px-5 py-3 backdrop-blur-xl bg-black/30 transition">
               Learn More
             </a>
           </div>
@@ -46,6 +46,25 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2">
               <CheckCircle2 size={18} className="text-orange-500" />
               Seamless integrations
+            </div>
+          </div>
+        </div>
+
+        {/* Liquid glass stat panel */}
+        <div className="mt-10 md:mt-14 max-w-xl">
+          <div className="rounded-2xl border border-white/15 bg-white/5 backdrop-blur-2xl p-5 text-white/90">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-xs uppercase tracking-wider text-white/70">Portfolio growth</div>
+                <div className="mt-1 text-2xl font-bold text-white">+18.4%</div>
+              </div>
+              <div className="text-right">
+                <div className="text-xs uppercase tracking-wider text-white/70">Risk</div>
+                <div className="mt-1 text-2xl font-bold text-orange-500">Low</div>
+              </div>
+            </div>
+            <div className="mt-4 h-1.5 w-full rounded-full bg-white/10">
+              <div className="h-1.5 rounded-full bg-gradient-to-r from-orange-400 to-orange-600" style={{ width: '68%' }} />
             </div>
           </div>
         </div>
